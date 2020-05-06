@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 글씨체 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        img {
+            display: block;
+            margin: 0px auto;
+        }
+    </style>
+    <title>ToDoList</title>
+</head>
+
+<body>
+    <!-- 전체 컨테이너 -->
+    <div class="container">
+        <!-- 소개페이지 -->
+        <div class="jumbotron">
+            <h1 class="display-4">TODOAPP에 오신것을 환영합니다.</h1>
+            <p class="lead">TODOAPP을 통해 해야 할 일들을 관리할 수 있습니다!</p>
+            <hr class="my-4">
+            <p>할일생성 : 폼을 작성하고 생성 버튼을 누르면 할일이 생성됩니다.<br>할일삭제 : done을 누르면 삭제됩니다.</p>
+            <p class="text-right">도커 및 쿠버네티스 실습을 위한 테스트 앱</p>
+        </div>
+        <!-- 메모 인풋 -->
+        <div class="row justify-content-center">
+            <div class="col mb-5" style="max-width: 400px;">
+                <form id="form">
+                    <div class="form-group">
+                        <label for="content">What to do</label>
+                        <input type="text" class="form-control" id="content" name="content" placeholder="해야 할 일을 입력하세요." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">카테고리</label>
+                        <select class="form-control" id="category" name="category">
+                              <option>집안일</option>
+                              <option>업무</option>
+                              <option>중요</option>
+                              <option>약속</option>
+                              <option>공부</option>
+                            </select>
+                    </div>
+                    <div class="form-group row">
+                        <label for="dueDate" class="col-2 col-form-label">기한</label>
+                        <div class="col-10">
+                            <input class="form-control" type="date" id="dueDate" name="dueDate">
+                        </div>
+                    </div>
+                    <button id="postBtn" class="btn btn-primary w-100">할 일 생성</button>
+                </form>
+            </div>
+        </div>
+        <!-- 메뉴 -->
+        <div class="row justify-content-center" style="margin-left:240px">
+            <div class="form-group">
+                <select class="form-control" id="sort">
+                  <option>작성시간</option>
+                  <option>내용</option>
+                  <option>기한</option>
+                </select>
+            </div>
+        </div>
+        <img id="loading" src="./img/loading.gif" width="100px" />
+        <!-- 메모들 목록 -->
+        <div id="todolist" class="row justify-content-center">
+
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Optional JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
